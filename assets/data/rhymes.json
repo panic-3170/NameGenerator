@@ -1,0 +1,21 @@
+{
+  "rhymeGroups": {
+    "ang": ["ang", "iang", "uang", "hang", "sang", "zang", "cang", "yang", "wang", "liang", "guang", "chuang", "shuang", "zhuang", "pang", "mang", "fang", "dang", "tang", "nang", "lang", "gang", "kang", "jiang", "qiang", "xiang", "chang", "shang", "zhang", "chang", "rang", "pang", "fang"],
+    "an": ["an", "ian", "uan", "han", "san", "zan", "can", "yan", "wan", "lian", "guan", "chuan", "shuan", "zhuan", "pan", "man", "fan", "dan", "tan", "nan", "lan", "gan", "kan", "jian", "qian", "xian", "bian", "mian", "nian", "pian", "tian", "ruan", "juan", "quan", "xuan", "yuan", "luan", "nuan", "huan"],
+    "i": ["i", "yi", "li", "ji", "qi", "xi", "ri", "zi", "ci", "si", "zhi", "chi", "shi", "ri", "mi", "ni", "di", "ti", "bi", "pi", "bi", "ji", "qi", "xi", "yi", "bi", "li", "mi"],
+    "u": ["u", "wu", "lu", "ju", "qu", "xu", "ru", "zu", "cu", "su", "zhu", "chu", "shu", "mu", "nu", "du", "tu", "bu", "pu", "gu", "ku", "hu", "fu", "yu", "lu", "gu", "hu", "pu"],
+    "ao": ["ao", "yao", "lao", "zao", "cao", "sao", "mao", "nao", "dao", "tao", "pao", "bao", "gao", "kao", "hao", "jiao", "qiao", "xiao", "miao", "niao", "piao", "tiao", "biao", "diao", "liao", "ruan", "shao", "rao"],
+    "ou": ["ou", "you", "lou", "zou", "cou", "sou", "mou", "nou", "dou", "tou", "pou", "bou", "gou", "kou", "hou", "jiou", "qiou", "xiou", "miu", "niu", "diu", "liu", "pou", "fou"],
+    "eng": ["eng", "weng", "leng", "zeng", "ceng", "seng", "meng", "neng", "deng", "teng", "peng", "feng", "geng", "keng", "heng", "beng", "reng", "sheng", "zheng", "cheng", "sheng"],
+    "ong": ["ong", "wong", "long", "zong", "cong", "song", "nong", "dong", "tong", "pong", "bong", "gong", "kong", "hong", "yong", "jiong", "qiong", "xiong", "chong", "zhong", "shong", "rong"],
+    "ai": ["ai", "yai", "lai", "zai", "cai", "sai", "mai", "nai", "dai", "tai", "pai", "bai", "gai", "kai", "hai", "wai", "kuai", "huai", "guai", "zhai", "chai", "shai", "zhai"],
+    "ei": ["ei", "wei", "lei", "zei", "mei", "nei", "dei", "tei", "pei", "bei", "gei", "kei", "hei", "shei", "zhei", "chuei"]
+  },
+  "ringing": ["i", "ang", "u", "an", "ao", "ou", "eng", "ong", "ai"],
+  "tones": {
+    "1": "平",
+    "2": "阳平",
+    "3": "上",
+    "4": "去"
+  }
+}

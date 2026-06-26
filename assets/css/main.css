@@ -1,0 +1,111 @@
+/* LXGW WenKai (霞鹜文楷) for Chinese brush feel + Noto Serif SC for headings */
+@import url('https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css');
+@import url('https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Light/result.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background-color: theme('colors.paper.DEFAULT');
+    color: theme('colors.ink.800');
+    font-family: theme('fontFamily.sans');
+    font-feature-settings: 'kern' 1;
+  }
+  h1, h2, h3, .font-serif-cn {
+    font-family: theme('fontFamily.kai');
+    letter-spacing: 0.01em;
+  }
+  ::selection {
+    background-color: theme('colors.cinnabar.DEFAULT');
+    color: theme('colors.paper.DEFAULT');
+  }
+}
+
+@layer components {
+  .container-content {
+    @apply mx-auto px-6 max-w-content;
+  }
+  .container-prose {
+    @apply mx-auto px-6 max-w-prose;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 h-12 bg-cinnabar text-paper font-medium tracking-wide
+           hover:bg-cinnabar-dark transition-colors duration-200 rounded-md
+           focus:outline-none focus:ring-2 focus:ring-cinnabar focus:ring-offset-2 focus:ring-offset-paper;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-5 h-11 border border-ink-200 text-ink-700
+           hover:border-ink-400 hover:text-ink-900 transition-colors duration-200 rounded-md;
+  }
+  .input-base {
+    @apply w-full h-12 px-4 bg-white border border-ink-200 text-ink-900 placeholder:text-ink-400
+           focus:outline-none focus:border-ink-500 transition-colors duration-200 rounded-md;
+  }
+  .card-base {
+    @apply bg-white border border-ink-200 rounded-lg p-6 transition-all duration-200;
+  }
+  .card-hover {
+    @apply hover:border-ink-300 hover:shadow-card-hover;
+  }
+  .seg-control {
+    @apply inline-flex items-center border border-ink-200 rounded-md overflow-hidden bg-white;
+  }
+  .seg-btn {
+    @apply px-3.5 h-9 text-sm text-ink-600 hover:text-ink-900 hover:bg-paper-dark transition-colors;
+  }
+  .seg-btn-active {
+    @apply bg-ink-800 text-paper hover:bg-ink-800 hover:text-paper;
+  }
+  .label-sm {
+    @apply text-xs uppercase tracking-widest text-ink-500 font-medium;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(26, 26, 26, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(26, 26, 26, 0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .divider-thin {
+    @apply h-px bg-ink-200 w-full;
+  }
+}
+
+/* 入场动画 */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.fade-up-1 { animation-delay: 0.05s; }
+.fade-up-2 { animation-delay: 0.12s; }
+.fade-up-3 { animation-delay: 0.2s; }
+.fade-up-4 { animation-delay: 0.28s; }
+.fade-up-5 { animation-delay: 0.36s; }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer-text {
+  background: linear-gradient(90deg, #1a1a1a 0%, #a8323a 50%, #1a1a1a 100%);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s linear infinite;
+}

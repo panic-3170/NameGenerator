@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fafaf7"/>
+      <stop offset="100%" stop-color="#f0ede5"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9e2a2b"/>
+      <stop offset="100%" stop-color="#c63d2f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- 装饰：墨点 -->
+  <circle cx="980" cy="120" r="6" fill="#9e2a2b" opacity="0.8"/>
+  <circle cx="1030" cy="180" r="3" fill="#9e2a2b" opacity="0.4"/>
+  <circle cx="200" cy="500" r="4" fill="#3d5a40" opacity="0.5"/>
+
+  <!-- 顶标 -->
+  <text x="600" y="130" text-anchor="middle" font-family="'Songti SC', 'Noto Serif SC', serif" font-size="24" fill="#9e2a2b" letter-spacing="6">中文网名生成器</text>
+
+  <!-- 主标 -->
+  <text x="600" y="280" text-anchor="middle" font-family="'Songti SC', 'Noto Serif SC', serif" font-size="96" font-weight="600" fill="#1f1d1a">有音韵 · 有寓意</text>
+  <text x="600" y="380" text-anchor="middle" font-family="'LXGW WenKai', 'Kaiti SC', serif" font-size="60" fill="#1f1d1a" opacity="0.85">的一个名字</text>
+
+  <!-- 副标 -->
+  <text x="600" y="470" text-anchor="middle" font-family="'Noto Sans SC', sans-serif" font-size="28" fill="#54524e">基于音韵评分 · 纯本地生成 · 无需注册</text>
+
+  <!-- 分隔线 -->
+  <line x1="500" y1="510" x2="700" y2="510" stroke="#9e2a2b" stroke-width="2" opacity="0.6"/>
+
+  <!-- 标签 -->
+  <text x="600" y="555" text-anchor="middle" font-family="'Noto Sans SC', sans-serif" font-size="22" fill="#54524e" letter-spacing="3">文艺 · 豪迈 · 清新 · 二次元</text>
+
+  <!-- 域名 -->
+  <text x="600" y="600" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="18" fill="#1f1d1a" opacity="0.6">namegen.apppss.com</text>
+</svg>

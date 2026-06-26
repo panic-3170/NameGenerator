@@ -1,0 +1,22 @@
+[
+  { "id": "t1", "pattern": "{p}{s}", "length": 2, "style": "通用", "styles": ["通用", "文艺", "清新", "豪迈", "二次元"] },
+  { "id": "t2", "pattern": "{p}{m}{s}", "length": 3, "style": "通用", "styles": ["通用", "文艺", "清新", "豪迈", "二次元"] },
+  { "id": "t3", "pattern": "{p}{m}{m}{s}", "length": 4, "style": "通用", "styles": ["通用", "文艺", "清新", "豪迈", "二次元"] },
+  { "id": "t4", "pattern": "{p}{s}", "length": 2, "style": "文艺", "styles": ["文艺", "清新"] },
+  { "id": "t5", "pattern": "{p}{m}{s}", "length": 3, "style": "文艺", "styles": ["文艺", "清新"] },
+  { "id": "t6", "pattern": "{p}{m}{m}{s}", "length": 4, "style": "文艺", "styles": ["文艺", "清新"] },
+  { "id": "t7", "pattern": "{p}{s}", "length": 2, "style": "豪迈", "styles": ["豪迈", "通用"] },
+  { "id": "t8", "pattern": "{p}{m}{s}", "length": 3, "style": "豪迈", "styles": ["豪迈", "通用"] },
+  { "id": "t9", "pattern": "{p}{m}{m}{s}", "length": 4, "style": "豪迈", "styles": ["豪迈", "通用"] },
+  { "id": "t10", "pattern": "{p}{s}", "length": 2, "style": "清新", "styles": ["清新", "文艺"] },
+  { "id": "t11", "pattern": "{p}{m}{s}", "length": 3, "style": "清新", "styles": ["清新", "文艺"] },
+  { "id": "t12", "pattern": "{p}{m}{m}{s}", "length": 4, "style": "清新", "styles": ["清新", "文艺"] },
+  { "id": "t13", "pattern": "{p}{s}", "length": 2, "style": "二次元", "styles": ["二次元", "豪迈"] },
+  { "id": "t14", "pattern": "{p}{m}{s}", "length": 3, "style": "二次元", "styles": ["二次元", "豪迈"] },
+  { "id": "t15", "pattern": "{p}{m}{m}{s}", "length": 4, "style": "二次元", "styles": ["二次元", "豪迈"] },
+  { "id": "t16", "pattern": "{m}{m}", "length": 2, "style": "对仗", "styles": ["文艺", "清新"] },
+  { "id": "t17", "pattern": "{m}{m}{m}", "length": 3, "style": "连绵", "styles": ["文艺", "清新"] },
+  { "id": "t18", "pattern": "{m}{m}{m}{m}", "length": 4, "style": "连绵", "styles": ["文艺", "清新"] },
+  { "id": "t19", "pattern": "{p}{p}", "length": 2, "style": "叠字", "styles": ["通用"] },
+  { "id": "t20", "pattern": "{p}{p}{m}{m}", "length": 4, "style": "对仗", "styles": ["豪迈", "通用"] }
+]
