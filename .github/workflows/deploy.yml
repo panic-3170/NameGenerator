@@ -12,7 +12,6 @@ permissions:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-  PNPM_ENABLE_BUILD_SCRIPTS: "true"
 
 concurrency:
   group: pages
@@ -26,7 +25,7 @@ jobs:
 
       - uses: pnpm/action-setup@v4
         with:
-          version: 11
+          version: 9
 
       - uses: actions/setup-node@v5
         with:
