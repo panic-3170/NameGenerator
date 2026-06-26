@@ -12,6 +12,7 @@ permissions:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  PNPM_ENABLE_BUILD_SCRIPTS: "true"
 
 concurrency:
   group: pages
@@ -35,9 +36,6 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-
-      - name: Approve build scripts
-        run: pnpm approve-builds --all
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
