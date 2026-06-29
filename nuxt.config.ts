@@ -60,7 +60,10 @@ export default defineNuxtConfig({
         { name: 'twitter:image', content: 'https://namegen.apppss.com/og-image.svg' }
       ],
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg', sizes: 'any' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon-32x32.svg', sizes: '32x32' },
+        { rel: 'apple-touch-icon', href: '/favicon-192x192.svg', sizes: '192x192' },
+        { rel: 'manifest', href: '/manifest.webmanifest' },
         { rel: 'canonical', href: 'https://namegen.apppss.com/' },
         { rel: 'alternate', type: 'text/plain', href: 'https://namegen.apppss.com/llms.txt', title: 'LLM-friendly description' }
       ]

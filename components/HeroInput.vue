@@ -2,11 +2,11 @@
 const description = defineModel<string>('description', { default: '' })
 const length = defineModel<2 | 3 | 4>('length', { default: 2 })
 const style = defineModel<'通用' | '文艺' | '豪迈' | '清新' | '二次元'>('style', { default: '通用' })
-const count = defineModel<10 | 20>('count', { default: 10 })
+const count = defineModel<10 | 20 | 30 | 50>('count', { default: 10 })
 
 const lengths: (2 | 3 | 4)[] = [2, 3, 4]
 const styles: ('通用' | '文艺' | '豪迈' | '清新' | '二次元')[] = ['通用', '文艺', '豪迈', '清新', '二次元']
-const counts: (10 | 20)[] = [10, 20]
+const counts: (10 | 20 | 30 | 50)[] = [10, 20, 30, 50]
 
 const placeholders = [
   '跨境电商',
@@ -25,10 +25,10 @@ const placeholder = placeholders[Math.floor(Math.random() * placeholders.length)
   <section class="container-prose pt-16 sm:pt-24 pb-10">
     <div class="text-center">
       <p class="label-sm text-cinnabar fade-up fade-up-1">中文网名生成器</p>
-      <h1 class="mt-4 text-4xl sm:text-5xl font-serif-cn text-ink-900 leading-tight text-balance fade-up fade-up-2">
+      <h1 class="mt-4 text-4xl sm:text-5xl font-serif-cn text-ink-900 leading-tight text-balance fade-up fade-up-2 dark:text-ink-100">
         一个有音韵 · <span class="shimmer-text">有典故</span> · 有寓意的名字
       </h1>
-      <p class="mt-5 text-base sm:text-lg text-ink-500 leading-relaxed text-balance fade-up fade-up-3">
+      <p class="mt-5 text-base sm:text-lg text-ink-500 leading-relaxed text-balance fade-up fade-up-3 dark:text-ink-400">
         基于音韵评分与主题词库，本地生成 2-4 字中文网名。<br class="hidden sm:block" />
         无需注册，不上传任何数据。
       </p>

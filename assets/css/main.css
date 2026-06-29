@@ -18,6 +18,10 @@
     font-family: theme('fontFamily.sans');
     font-feature-settings: 'kern' 1;
   }
+  .dark body {
+    background-color: theme('colors.ink.900');
+    color: theme('colors.ink.200');
+  }
   h1, h2, h3, .font-serif-cn {
     font-family: theme('fontFamily.kai');
     letter-spacing: 0.01em;
@@ -42,23 +46,28 @@
   }
   .btn-ghost {
     @apply inline-flex items-center justify-center gap-2 px-5 h-11 border border-ink-200 text-ink-700
-           hover:border-ink-400 hover:text-ink-900 transition-colors duration-200 rounded-md;
+           hover:border-ink-400 hover:text-ink-900 transition-colors duration-200 rounded-md
+           dark:border-ink-600 dark:text-ink-300 dark:hover:border-ink-400 dark:hover:text-ink-100;
   }
   .input-base {
     @apply w-full h-12 px-4 bg-white border border-ink-200 text-ink-900 placeholder:text-ink-400
-           focus:outline-none focus:border-ink-500 transition-colors duration-200 rounded-md;
+           focus:outline-none focus:border-ink-500 transition-colors duration-200 rounded-md
+           dark:bg-ink-800 dark:border-ink-700 dark:text-ink-100 dark:placeholder:text-ink-500;
   }
   .card-base {
-    @apply bg-white border border-ink-200 rounded-lg p-6 transition-all duration-200;
+    @apply bg-white border border-ink-200 rounded-lg p-6 transition-all duration-200
+           dark:bg-ink-800 dark:border-ink-700;
   }
   .card-hover {
     @apply hover:border-ink-300 hover:shadow-card-hover;
   }
   .seg-control {
-    @apply inline-flex items-center border border-ink-200 rounded-md overflow-hidden bg-white;
+    @apply inline-flex items-center border border-ink-200 rounded-md overflow-hidden bg-white
+           dark:border-ink-600 dark:bg-ink-800;
   }
   .seg-btn {
-    @apply px-3.5 h-9 text-sm text-ink-600 hover:text-ink-900 hover:bg-paper-dark transition-colors;
+    @apply px-3.5 h-9 text-sm text-ink-600 hover:text-ink-900 hover:bg-paper-dark transition-colors
+           dark:text-ink-400 dark:hover:text-ink-200 dark:hover:bg-ink-700;
   }
   .seg-btn-active {
     @apply bg-ink-800 text-paper hover:bg-ink-800 hover:text-paper;

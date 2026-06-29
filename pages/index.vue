@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import { Wand2, Loader2, RotateCcw } from 'lucide-vue-next'
 import { generateNames, type GeneratedName } from '~/composables/useNameGenerator'
+import { useHistory, type HistoryItem } from '~/composables/useHistory'
 
 useWebAppSEO()
+
+const { add: addHistory } = useHistory()
 
 const description = ref('')
 const length = ref<2 | 3 | 4>(2)
 const style = ref<'通用' | '文艺' | '豪迈' | '清新' | '二次元'>('通用')
-const count = ref<10 | 20>(10)
+const count = ref<10 | 20 | 30 | 50>(10)
 
 const results = ref<GeneratedName[]>([])
 const loading = ref(false)
@@ -24,6 +27,15 @@ async function generate() {
       style: style.value,
       count: count.value
     })
+    if (results.value.length) {
+      addHistory({
+        description: description.value,
+        length: length.value,
+        style: style.value,
+        count: count.value,
+        names: results.value.map(r => r.text)
+      })
+    }
   } catch (e) {
     toast.value = '生成失败：' + (e as Error).message
     setTimeout(() => (toast.value = ''), 3000)
@@ -43,6 +55,14 @@ function onEnhanced(newNames: { text: string; pinyin: string[]; tones: number[];
 function showError(msg: string) {
   toast.value = msg
   setTimeout(() => (toast.value = ''), 3000)
+}
+
+function restoreHistory(item: HistoryItem) {
+  description.value = item.description
+  length.value = item.length
+  style.value = item.style
+  count.value = item.count
+  generate()
 }
 
 useHead({
@@ -70,7 +90,7 @@ useHead({
       <div class="flex flex-col sm:flex-row items-center gap-3 justify-center">
         <button
           type="button"
-          class="btn-primary px-8 h-12 text-base min-w-[180px]"
+          class="btn-primary px-6 sm:px-8 h-12 text-base min-w-[160px] sm:min-w-[180px]"
           :disabled="loading"
           @click="generate"
         >
@@ -81,7 +101,7 @@ useHead({
         <button
           v-if="hasGenerated && !loading"
           type="button"
-          class="btn-ghost"
+          class="btn-ghost px-6 h-11"
           @click="regenerate"
         >
           <RotateCcw :size="16" />
@@ -140,6 +160,8 @@ useHead({
     />
 
     <FAQSection />
+
+    <HistoryPanel @restore="restoreHistory" />
 
     <!-- SEO 补充：文字说明 -->
     <section class="container-prose mt-24">

@@ -106,22 +106,22 @@ async function runEnhance() {
 
 <template>
   <div class="container-prose">
-    <div class="border border-ink-200 rounded-lg bg-white overflow-hidden">
+    <div class="border border-ink-200 rounded-lg bg-white overflow-hidden dark:border-ink-700 dark:bg-ink-800">
       <button
         type="button"
-        class="w-full flex items-center justify-between px-4 sm:px-5 h-14 text-left hover:bg-paper-dark/50 transition-colors"
+        class="w-full flex items-center justify-between px-4 sm:px-5 h-14 text-left hover:bg-paper-dark/50 transition-colors dark:hover:bg-ink-700/50"
         :aria-expanded="open"
         @click="open = !open"
       >
         <div class="flex items-center gap-3 min-w-0">
           <Sparkles class="text-cinnabar shrink-0" :size="18" />
-          <span class="text-sm font-medium text-ink-800">AI 增强（可选）</span>
+          <span class="text-sm font-medium text-ink-800 dark:text-ink-200">AI 增强（可选）</span>
           <span class="text-xs text-ink-400 hidden sm:inline truncate">用大模型改写 · 需自备 OpenAI 兼容 Key</span>
         </div>
         <span class="text-ink-400 text-xs shrink-0 ml-2">{{ open ? '收起' : '展开' }}</span>
       </button>
 
-      <div v-if="open" class="px-4 sm:px-5 pb-5 pt-4 border-t border-ink-200/60 space-y-4">
+      <div v-if="open" class="px-4 sm:px-5 pb-5 pt-4 border-t border-ink-200/60 space-y-4 dark:border-ink-700/60">
         <div class="grid sm:grid-cols-2 gap-3">
           <label class="block sm:col-span-2">
             <span class="label-sm">API Key</span>
@@ -187,7 +187,7 @@ async function runEnhance() {
           <button
             v-if="config.apiKey"
             type="button"
-            class="text-xs text-ink-400 hover:text-cinnabar underline-offset-2 hover:underline"
+            class="text-xs text-ink-400 hover:text-cinnabar underline-offset-2 hover:underline dark:hover:text-cinnabar-light"
             @click="clear"
           >
             <Trash2 :size="12" class="inline -mt-0.5 mr-1" />

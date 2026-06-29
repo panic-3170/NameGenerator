@@ -225,7 +225,7 @@ export async function generateNames(opts: GenerateOptions): Promise<GeneratedNam
 
   const scored: GeneratedName[] = []
   for (const name of candidateNames) {
-    const charList = [...name].map(c => charMap.get(c))
+    const charList = [...name].map(c => charMap.get(c)).filter((c): c is NameChar => Boolean(c))
     const baseScore = scoreName(name, charList)
     const sm = styleMatchScore(name, charMap, style)
     // 风格匹配 20% 加权 + 基础音韵 80%

@@ -39,7 +39,7 @@ const faqs = [
   <section class="container-prose mt-20">
     <header class="text-center">
       <p class="label-sm text-cinnabar">常见问题</p>
-      <h2 class="mt-3 text-3xl font-serif-cn text-ink-900">关于取名神器的疑问</h2>
+      <h2 class="mt-3 text-3xl font-serif-cn text-ink-900 dark:text-ink-100">关于取名神器的疑问</h2>
     </header>
     <div class="mt-10 space-y-2">
       <details
@@ -47,11 +47,11 @@ const faqs = [
         :key="i"
         class="group card-base cursor-pointer"
       >
-        <summary class="flex items-center justify-between font-serif-cn text-base sm:text-lg text-ink-800 list-none">
+        <summary class="flex items-center justify-between font-serif-cn text-base sm:text-lg text-ink-800 list-none dark:text-ink-200">
           <span>{{ faq.q }}</span>
           <span class="text-ink-400 text-sm transition-transform group-open:rotate-45">+</span>
         </summary>
-        <p class="mt-3 text-sm text-ink-600 leading-relaxed">{{ faq.a }}</p>
+        <p class="mt-3 text-sm text-ink-600 leading-relaxed dark:text-ink-300">{{ faq.a }}</p>
       </details>
     </div>
   </section>

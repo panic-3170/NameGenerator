@@ -35,7 +35,8 @@ let _templates: Template[] | null = null
 const charSet = new Set<string>()
 
 async function loadJSON<T>(path: string): Promise<T> {
-  return await $fetch<T>(path)
+  const result = await $fetch<T>(path)
+  return result as T
 }
 
 export async function loadAllData() {
