@@ -23,27 +23,20 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 11
-
       - uses: actions/setup-node@v5
         with:
           node-version: 24
-          cache: pnpm
+          cache: npm
 
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Approve build scripts
-        run: pnpm approve-builds --all
-
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm install
 
       - name: Generate static site
-        run: pnpm generate
+        run: npm run generate
         env:
           NITRO_PRESET: github_pages
 
