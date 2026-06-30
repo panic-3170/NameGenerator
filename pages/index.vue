@@ -87,21 +87,24 @@ useHead({
     />
 
     <div class="container-prose">
-      <div class="flex flex-col sm:flex-row items-center gap-3 justify-center">
+      <div class="flex flex-row items-center gap-3 justify-center min-h-[48px]">
         <button
           type="button"
           class="btn-primary px-6 sm:px-8 h-12 text-base min-w-[160px] sm:min-w-[180px]"
+          :class="{ 'opacity-80 cursor-wait': loading }"
           :disabled="loading"
           @click="generate"
         >
-          <Loader2 v-if="loading" class="animate-spin" :size="18" />
-          <Wand2 v-else :size="18" />
-          <span>{{ loading ? '生成中' : '生成网名' }}</span>
+          <Loader2 v-if="loading" class="animate-spin shrink-0" :size="18" />
+          <Wand2 v-else class="shrink-0" :size="18" />
+          <span class="whitespace-nowrap">{{ loading ? '生成中' : '生成网名' }}</span>
         </button>
         <button
-          v-if="hasGenerated && !loading"
+          v-show="hasGenerated"
           type="button"
-          class="btn-ghost px-6 h-11"
+          class="btn-ghost px-6 h-11 transition-opacity"
+          :class="{ 'opacity-0 pointer-events-none': loading, 'opacity-100': !loading }"
+          :disabled="loading"
           @click="regenerate"
         >
           <RotateCcw :size="16" />
